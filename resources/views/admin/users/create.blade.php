@@ -3,28 +3,39 @@
 
 @section('content')
 
-<h1>Create Users</h1>
+    <h1>Create Users</h1>
 
     {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store']) !!}
 
-        <div class="form-group">
+    <div class="form-group">
 
-            {!! Form::label('title', 'Title:') !!}
-            {!! Form::text('title', null, ['class'=>'form-control', 'placeholder'=>'title here']) !!}
-        </div>
+        {!! Form::label('name', 'Name:') !!}
+        {!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'name']) !!}
+    </div>
 
-        <div class="form-group">
+    <div class="form-group">
 
-            {!! Form::label('body', 'Body:') !!}
-            {!! Form::text('content', null, ['class'=>'form-control', 'placeholder'=>'body here']) !!}
+        {!! Form::label('email', 'Email:') !!}
+        {!! Form::text('email', null, ['class'=>'form-control', 'placeholder'=>'email']) !!}
+    </div>
 
-        </div>
+    <div class="form-group">
 
-        <div class="form-group">
+        {!! Form::label('role_id', 'Role:') !!}
+        {!! Form::text('role_id', null, ['class'=>'form-control', 'placeholder'=>'role']) !!}
+    </div>
 
-           {!! Form::submit('create post', ['class'=>'btn btn-primary']) !!}
+    <div class="form-group">
 
-        </div>
+        {!! Form::label('is_active', 'Status:') !!}
+        {!! Form::text('is_active', null, ['class'=>'form-control', 'placeholder'=>'status']) !!}
+    </div>
+
+    <div class="form-group">
+
+        {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
+
+    </div>
 
 
     {!! Form::close() !!}
