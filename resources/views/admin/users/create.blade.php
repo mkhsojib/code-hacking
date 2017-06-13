@@ -16,7 +16,7 @@
     <div class="form-group">
 
         {!! Form::label('email', 'Email:') !!}
-        {!! Form::text('email', null, ['class'=>'form-control', 'placeholder'=>'email']) !!}
+        {!! Form::email('email', null, ['class'=>'form-control', 'placeholder'=>'email']) !!}
     </div>
 
     <div class="form-group">
@@ -33,8 +33,8 @@
 
     <div class="form-group">
 
-            {!! Form::label('password', 'Password:') !!}
-            {!! Form::password('password',  ['class'=>'form-control', 'placeholder'=>'password here']) !!}
+        {!! Form::label('password', 'Password:') !!}
+        {!! Form::password('password',  ['class'=>'form-control', 'placeholder'=>'password here']) !!}
     </div>
 
     <div class="form-group">
@@ -45,5 +45,9 @@
 
 
     {!! Form::close() !!}
+
+    @include('includes.form_error')
+
+
 
 @stop
