@@ -33,6 +33,12 @@
 
     <div class="form-group">
 
+            {!! Form::label('password', 'Password:') !!}
+            {!! Form::password('password',  ['class'=>'form-control', 'placeholder'=>'password here']) !!}
+    </div>
+
+    <div class="form-group">
+
         {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
 
     </div>
